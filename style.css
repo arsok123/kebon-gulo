@@ -58,47 +58,7 @@ body {
     color: #E1306C;
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    background-image: url('hero.png');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 120px 20px 60px 20px;
-    text-align: center;
-}
 
-.hero .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero .lead {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.hero .cta {
-    background-color: #E1306C;
-    padding: 12px 30px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-}
-
-.hero .cta:hover {
-    background-color: #c12456;
-}
 
 /* Sections */
 .section {
