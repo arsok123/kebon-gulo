@@ -20,7 +20,7 @@ body {
 }
 
 /* Header */
-header {
+.site-header {
     background-color: #fff;
     padding: 20px 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -31,21 +31,22 @@ header {
     z-index: 1000;
 }
 
-header .header-inner {
+.site-header .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
-header .logo {
+.site-header .logo {
     max-width: 150px;
 }
 
-header nav {
+.site-header .nav {
     display: flex;
 }
 
-header nav a {
+.site-header .nav a {
     text-decoration: none;
     font-weight: bold;
     color: #333;
@@ -53,17 +54,8 @@ header nav a {
     font-size: 16px;
 }
 
-header nav a:hover {
+.site-header .nav a:hover {
     color: #E1306C;
-}
-
-header .cta a {
-    background-color: #E1306C;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
 }
 
 /* Hero Section */
@@ -199,5 +191,15 @@ footer {
 
     .cta {
         font-size: 16px;
+    }
+
+    /* Flexbox Adjustment for Smaller Screens */
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-header .nav {
+        flex-direction: column;
     }
 }
