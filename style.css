@@ -29,10 +29,9 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    width: 100%; /* Pastikan header mengisi lebar halaman */
+    width: 100%; /* Make sure header takes the full width */
 }
 
-/* Inner layout of the header */
 .site-header .header-inner {
     display: flex;
     justify-content: space-between;
@@ -40,12 +39,10 @@ body {
     width: 100%;
 }
 
-/* Logo styling */
 .site-header .logo {
     max-width: 150px;
 }
 
-/* Navigation menu */
 .site-header .nav {
     display: flex;
 }
@@ -62,8 +59,47 @@ body {
     color: #E1306C;
 }
 
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('hero.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 20px 60px 20px;
+    text-align: center;
+}
 
+.hero .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
 
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero .lead {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero .cta {
+    background-color: #E1306C;
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.hero .cta:hover {
+    background-color: #c12456;
+}
 
 /* Sections */
 .section {
@@ -138,6 +174,7 @@ footer {
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
+    /* Hero Section */
     .hero h1 {
         font-size: 2rem;
     }
@@ -146,25 +183,28 @@ footer {
         font-size: 1.2rem;
     }
 
+    /* Gallery */
     .gallery-grid {
         grid-template-columns: 1fr; /* Stack gallery images on mobile */
     }
 
+    /* Header */
+    .site-header .header-inner {
+        flex-direction: column; /* Stack logo and navigation vertically */
+        align-items: flex-start; /* Align items to the start of the container */
+    }
+
+    .site-header .nav {
+        flex-direction: column; /* Make navigation items stack vertically */
+    }
+
     header nav a {
         font-size: 14px;
+        margin-left: 0;
+        margin-top: 10px; /* Add margin for spacing */
     }
 
     .cta {
         font-size: 16px;
-    }
-
-    /* Flexbox Adjustment for Smaller Screens */
-    .site-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .site-header .nav {
-        flex-direction: column;
     }
 }
