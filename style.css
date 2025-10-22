@@ -1,7 +1,144 @@
-/* Ensure the gallery images are responsive */
+/* Global Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.site-header {
+    background-color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #333;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    color: #E1306C;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-color: #58a6e3;
+    color: white;
+    padding: 120px 20px 60px 20px;
+    text-align: center;
+    background-image: url('hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.hero .lead {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta {
+    background-color: #E1306C;
+    padding: 15px 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.cta:hover {
+    background-color: #c12456;
+}
+
+/* About Section */
+.section {
+    padding: 50px 0;
+}
+
+#about {
+    background-color: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Kegiatan Section */
+#kegiatan h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.kegiatan-item {
+    margin-bottom: 20px;
+}
+
+.kegiatan-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Gallery Section */
+#galeri {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid layout */
     gap: 16px;
     margin-top: 20px;
 }
@@ -10,19 +147,56 @@
     width: 100%;  /* Ensure images take the full width of the grid cell */
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.05); /* Slightly scale up image on hover */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Enhance shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* General responsive adjustments */
+/* Location Section */
+#lokasi {
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#lokasi p {
+    font-size: 1.1rem;
+}
+
+.map-link {
+    background-color: #E1306C;
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.map-link:hover {
+    background-color: #c12456;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries */
 @media screen and (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 1.8rem;  /* Adjust hero text size for mobile */
+    /* Hero Section */
+    .hero h1 {
+        font-size: 1.8rem;
     }
 
     .cta {
@@ -30,15 +204,27 @@
         padding: 12px 30px;
     }
 
+    /* Gallery Layout */
     .gallery-grid {
         grid-template-columns: 1fr; /* Stack images vertically on mobile */
     }
 
-    .site-header {
-        padding: 10px 20px; /* Adjust header padding */
+    /* Adjust navigation font size */
+    .nav a {
+        font-size: 14px;
     }
 
-    .nav a {
-        font-size: 14px;  /* Smaller font for navigation on mobile */
+    /* About and Kegiatan Sections */
+    #about, #kegiatan {
+        padding: 20px;
+    }
+
+    #about h2, #kegiatan h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 15px;
     }
 }
