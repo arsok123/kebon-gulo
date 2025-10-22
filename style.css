@@ -9,6 +9,7 @@ body {
     font-family: 'Nunito', sans-serif;
     background-color: #f8f8f8;
     color: #333;
+    font-size: 18px; /* Default font size for larger screens */
 }
 
 /* Wrap for Centered Content */
@@ -29,7 +30,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    width: 100%; /* Make sure header takes the full width */
+    width: 100%;
 }
 
 .site-header .header-inner {
@@ -79,7 +80,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3rem; /* Large font size */
     margin-bottom: 20px;
 }
 
@@ -174,13 +175,18 @@ footer {
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
+    /* Adjust font sizes for mobile */
+    body {
+        font-size: 16px; /* Default font size for mobile */
+    }
+
     /* Hero Section */
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Adjust title size */
     }
 
     .hero .lead {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Adjust subtitle size */
     }
 
     /* Gallery */
@@ -199,12 +205,22 @@ footer {
     }
 
     header nav a {
-        font-size: 14px;
+        font-size: 14px; /* Adjust font size for navigation */
         margin-left: 0;
         margin-top: 10px; /* Add margin for spacing */
     }
 
+    /* Call to Action button */
     .cta {
         font-size: 16px;
+    }
+
+    /* Section Titles */
+    h2 {
+        font-size: 2rem; /* Adjust heading size for mobile */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph size for mobile */
     }
 }
