@@ -1,3 +1,65 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Wrap for Centered Content */
+.wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+    background-color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Inner layout of the header */
+.site-header .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.site-header .logo {
+    max-width: 150px;
+}
+
+.site-header .nav {
+    display: flex;
+}
+
+.site-header .nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.site-header .nav a:hover {
+    color: #E1306C;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -5,23 +67,24 @@
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 120px 20px 60px 20px; /* Menambahkan padding kiri dan kanan */
+    padding: 120px 20px 60px 20px;
     text-align: center;
+    margin-top: 80px; /* Add margin-top to push content down */
     display: flex;
     justify-content: center;
-    align-items: center; /* Vertikal centering */
-    height: 100vh; /* Pastikan hero section memenuhi layar */
+    align-items: center; /* Vertically center the content */
+    height: auto; /* Ensure it doesn't take full height */
 }
 
 .hero .hero-content {
     z-index: 1;
     text-align: center;
-    max-width: 90%; /* Menambahkan batasan lebar agar teks tidak terlalu lebar */
-    padding: 0 20px; /* Memberikan ruang di kiri dan kanan untuk teks */
+    max-width: 90%; /* Add max-width to avoid text stretching too much */
+    padding: 0 20px; /* Padding to ensure text doesn't touch sides */
 }
 
 .hero h1 {
-    font-size: 3rem; /* Besar font yang sesuai untuk hero */
+    font-size: 3rem; /* Larger font for title */
     margin-bottom: 20px;
 }
 
@@ -41,4 +104,50 @@
 
 .hero .cta:hover {
     background-color: #c12456;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem; /* Smaller font for mobile */
+    }
+
+    .hero .lead {
+        font-size: 1.2rem; /* Smaller font for mobile */
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    .cta {
+        font-size: 16px;
+    }
+
+    /* Flexbox Adjustment for Smaller Screens */
+    .site-header .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-header .nav {
+        flex-direction: column;
+    }
 }
