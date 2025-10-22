@@ -1,73 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>Agrowisata Edukatif Kebon Gulo</title>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrowisata Edukatif Kebon Gulo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="wrap header-inner">
-            <img src="logo.png" alt="Agrowisata Kebon Gulo" class="logo">
-            <nav class="nav">
-                <a href="#about">Tentang</a>
-                <a href="#kegiatan">Kegiatan</a>
-                <a href="#galeri">Galeri</a>
-                <a href="#lokasi">Lokasi</a>
-            </nav>
-        </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Logo Kebon Gulo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kegiatan">Kegiatan</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#lokasi">Lokasi</a></li>
+            </ul>
+            <div class="cta">
+                <a href="https://wa.me/6288740008643" target="_blank">Kunjungi Kami</a>
+            </div>
+        </nav>
     </header>
 
-    <section class="hero">
-        <img src="hero.png" alt="Anak-anak di kebun" class="hero-img">
+    <section id="hero">
         <div class="hero-content">
-            <h1>Belajar dari Alam<br> Bersama Kebon Gulo 🌿</h1>
-            <p class="lead">Agrowisata Edukatif Kebon Gulo — ruang belajar alam untuk anak-anak dan keluarga di Boyolali.</p>
-            <a class="cta" href="https://wa.me/6288740008643?text=%F0%9F%8C%9E%20Semangat%20pagi,%20saya%20ingin%20menanyakan%20paket%20kegiatan%20edukatif%20di%20Kebon%20Gulo%20untuk%20sekolah%20kami" target="_blank" rel="noopener">Kunjungi Kami</a>
+            <h1>Belajar dari Alam Bersama Kebon Gulo 🌿</h1>
+            <p>Agrowisata Edukatif Kebon Gulo — ruang belajar alam untuk anak-anak dan keluarga di Boyolali.</p>
         </div>
     </section>
 
-    <main class="wrap">
-        <section id="about" class="section about">
-            <h2>Tentang Kebon Gulo</h2>
-            <p style="text-align: justify;">
-                <strong>Kabupaten Boyolali</strong>, yang terletak di kaki <strong>Gunung Merapi</strong> dan <strong>Merbabu</strong>, menyimpan keindahan alam yang memikat hati setiap pengunjung...
-            </p>
-        </section>
+    <section id="tentang">
+        <h2>Tentang Kebon Gulo</h2>
+        <p>Agrowisata Kebon Gulo adalah tempat di mana anak-anak dapat belajar tentang alam melalui berbagai kegiatan edukatif...</p>
+    </section>
 
-        <section id="kegiatan">
-            <h2>Kegiatan Edukatif</h2>
+    <section id="kegiatan">
+        <h2>Kegiatan Edukatif</h2>
+        <div class="kegiatan">
             <div class="kegiatan-item">
                 <h3>Menanam & Merawat Tanaman</h3>
-                <p>Siswa belajar langsung menanam bibit, menyiram, dan merawat tanaman.</p>
+                <p>Anak-anak belajar menanam, menyiram, dan merawat tanaman kecil.</p>
             </div>
-        </section>
-
-        <section id="galeri" class="section gallery">
-            <h2>Galeri Ilustratif</h2>
-            <div class="gallery-grid">
-                <img src="https://drive.google.com/uc?id=1Hft1VXyAmLnmgaecqCXuPASXzr6yeFXa" alt="Kedatangan">
-                <img src="https://drive.google.com/uc?id=1HONg4WWjl061t_rUT7IUy0Fq8509qBR5" alt="Makan">
-                <img src="https://drive.google.com/uc?id=1Iw7I0kIDo1X4X6-nwydpy7z_E5xaWLY0" alt="Outbond">
-                <img src="https://drive.google.com/uc?id=1uFSJMQ2bdqvyytAwZYckRUD_Z01X2Txf" alt="Bermain">
-                <img src="https://drive.google.com/uc?id=107fylMEm7IUZ0SOl2vdrBkBqvqstyigA" alt="Anak TK">
+            <div class="kegiatan-item">
+                <h3>Bermain Sains Alam</h3>
+                <p>Eksperimen sederhana untuk mengenal tanah, air, dan tumbuhan.</p>
             </div>
-        </section>
-
-        <section id="lokasi" class="section location">
-            <h2>Lokasi & Kontak</h2>
-            <p>📍 Desa Kebon Gulo, Kecamatan Musuk, Boyolali</p>
-            <p>🕓 Buka setiap hari 08.00 – 16.00 WIB</p>
-            <a class="map-link" href="https://www.google.com/maps/place/Agro+Wisata+Kebon+Gulo" target="_blank" rel="noopener">Lihat di Google Maps</a>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="wrap">
-            <p>© 2025 Agrowisata Edukatif Kebon Gulo — Edukasi dari Alam untuk Generasi Masa Depan</p>
+            <!-- Tambahkan kegiatan lainnya di sini -->
         </div>
+    </section>
+
+    <section id="galeri">
+        <h2>Galeri Ilustratif</h2>
+        <div class="gallery-grid">
+            <img src="https://drive.google.com/uc?id=1Hft1VXyAmLnmgaecqCXuPASXzr6yeFXa" alt="Kedatangan">
+            <img src="https://drive.google.com/uc?id=1HONg4WWjl061t_rUT7IUy0Fq8509qBR5" alt="Makan">
+            <img src="https://drive.google.com/uc?id=1Iw7I0kIDo1X4X6-nwydpy7z_E5xaWLY0" alt="Outbond">
+            <img src="https://drive.google.com/uc?id=1uFSJMQ2bdqvyytAwZYckRUD_Z01X2Txf" alt="Bermain">
+            <img src="https://drive.google.com/uc?id=107fylMEm7IUZ0SOl2vdrBkBqvqstyigA" alt="Anak TK">
+        </div>
+    </section>
+
+    <section id="lokasi">
+        <h2>Lokasi & Kontak</h2>
+        <p>📍 Desa Kebon Gulo, Kecamatan Musuk, Boyolali</p>
+        <p>🕓 Buka setiap hari 08.00 – 16.00 WIB</p>
+        <a href="https://www.google.com/maps/place/Agro+Wisata+Kebon+Gulo" target="_blank">Lihat di Google Maps</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Agrowisata Edukatif Kebon Gulo — Edukasi dari Alam untuk Generasi Masa Depan</p>
     </footer>
 </body>
 </html>
