@@ -1,198 +1,38 @@
-/* Umum */
-body {
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-.wrap {
-    width: 90%;
-    margin: 0 auto;
-}
-
-/* Header */
-.site-header {
-    background-color: #2d2d2d;
-    padding: 20px 0;
-}
-
-.site-header .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.site-header .logo {
-    width: 150px;
-}
-
-.nav {
-    display: flex;
-    gap: 20px;
-}
-
-.nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.nav a:hover {
-    color: #e1306c;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    text-align: center;
-}
-
-.hero-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero .lead {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.hero .cta {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #e1306c;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.hero .cta:hover {
-    background-color: #c31e5b;
-}
-
-/* Section About */
-.section {
-    padding: 40px 0;
-}
-
-.about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-/* Galeri */
+/* Ensure the gallery images are responsive */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tiga kolom */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 16px;
     margin-top: 20px;
 }
 
 .gallery-grid img {
-    width: 100%;
+    width: 100%;  /* Ensure images take the full width of the grid cell */
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.gallery-grid img:hover {
-    transform: scale(1.05); /* Zoom effect saat gambar di-hover */
-}
-
-/* Section Lokasi */
-.location h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.location .map-link {
-    font-size: 16px;
-    background-color: #e1306c;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s;
-}
-
-.location .map-link:hover {
-    background-color: #c31e5b;
-}
-
-/* Footer */
-.site-footer {
-    background-color: #2d2d2d;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.site-footer p {
-    font-size: 14px;
-}
-
-/* Button CTA */
-.cta-block h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.cta.big {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #e1306c;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.cta.big:hover {
-    background-color: #c31e5b;
-}
-
-/* Responsif */
+/* General responsive adjustments */
 @media screen and (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero .lead {
-        font-size: 1.2rem;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* Dua kolom pada layar kecil */
+    .hero-content h1 {
+        font-size: 1.8rem;  /* Adjust hero text size for mobile */
     }
 
     .cta {
-        font-size: 14px;
-        padding: 12px 24px;
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Stack images vertically on mobile */
+    }
+
+    .site-header {
+        padding: 10px 20px; /* Adjust header padding */
+    }
+
+    .nav a {
+        font-size: 14px;  /* Smaller font for navigation on mobile */
     }
 }
