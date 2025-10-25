@@ -150,4 +150,10 @@ p {
     .site-header .nav {
         flex-direction: column;
     }
+
+    /* Adjust Hero Image Responsiveness */
+    .hero {
+        padding: 100px 20px 40px 20px; /* Adjust padding for smaller screens */
+        margin-top: 60px; /* Reduce margin-top for mobile */
+    }
 }
