@@ -73,18 +73,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; /* Vertically center the content */
-    height: auto; /* Ensure it doesn't take full height */
+    height: auto;
+}
+
+.hero .hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure image stays behind content */
 }
 
 .hero .hero-content {
     z-index: 1;
+    position: relative;
     text-align: center;
-    max-width: 90%; /* Add max-width to avoid text stretching too much */
-    padding: 0 20px; /* Padding to ensure text doesn't touch sides */
+    max-width: 90%;
+    padding: 0 20px;
 }
 
 .hero h1 {
-    font-size: 3rem; /* Larger font for title */
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
