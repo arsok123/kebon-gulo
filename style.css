@@ -1,15 +1,48 @@
-/* Styling untuk tombol download brosur */
-.program .cta {
-    background-color: #E1306C; /* Warna tombol */
+/* Styling untuk menu baru di header */
+.site-header .nav a.menu-item {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.site-header .nav a.menu-item:hover {
+    color: #E1306C;
+}
+
+/* Styling untuk Section Hubungi Kami */
+.contact {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact a.cta {
+    background-color: #4CAF50;
     padding: 12px 30px;
     color: white;
     text-decoration: none;
     font-size: 18px;
     border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block; /* Tombol dalam satu baris */
 }
 
-.program .cta:hover {
-    background-color: #c12456; /* Warna tombol saat hover */
+.contact a.cta:hover {
+    background-color: #45a049;
+}
+
+/* Styling untuk Section Program Kami */
+.program {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.program a.cta {
+    background-color: #E1306C;
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.program a.cta:hover {
+    background-color: #c12456;
 }
