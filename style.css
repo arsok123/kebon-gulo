@@ -189,30 +189,42 @@ img {
 }
 
 /* === PROGRAM KAMI (TOMBOL BROSUR MERAH) === */
+/* === PROGRAM KAMI (TOMBOL BROSUR HIJAU) === */
 .program {
   text-align: center;
 }
 
 .program .cta {
-  background: #E1306C;
+  background: #43a047;               /* hijau sama seperti CTA utama */
   color: #fff;
-  border-radius: 14px;
+  border-radius: 30px;
   padding: 14px 30px;
   font-size: 1rem;
   font-weight: 600;
   display: inline-block;
   margin: 12px auto;
   text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   text-align: center;
   width: auto;
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
 .program .cta:hover {
-  background: #c12456;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  background: #2e7d32;               /* hijau lebih gelap saat hover */
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* di HP tombol program tetap full-width rapi */
+@media (max-width: 768px) {
+  .program .cta {
+    display: block;
+    width: 90%;
+    max-width: 360px;
+    border-radius: 30px;
+  }
 }
 
 /* === GENERIC SECTION === */
