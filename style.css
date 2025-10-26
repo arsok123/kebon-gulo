@@ -1,9 +1,9 @@
 <script>
-  // pilih semua elemen yang punya class "reveal"
+  // --- Scroll Reveal ---
   const reveals = document.querySelectorAll('.reveal');
 
   function onScrollReveal() {
-    const triggerBottom = window.innerHeight * 0.85; // 85% dari tinggi layar
+    const triggerBottom = window.innerHeight * 0.85;
     reveals.forEach(el => {
       const rect = el.getBoundingClientRect();
       if (rect.top < triggerBottom) {
@@ -12,7 +12,20 @@
     });
   }
 
-  // jalankan saat load dan saat scroll
   window.addEventListener('scroll', onScrollReveal);
   window.addEventListener('load', onScrollReveal);
+
+  // --- Header shadow saat scroll ---
+  const header = document.querySelector('.site-header');
+
+  function onScrollHeader() {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', onScrollHeader);
+  window.addEventListener('load', onScrollHeader);
 </script>
