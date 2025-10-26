@@ -395,7 +395,7 @@ img {
     margin: 5px 10px 0 0;
   }
 
-  /* ===== HERO MOBILE (revisi posisi teks agar center secara visual) ===== */
+  /* ===== HERO MOBILE ===== */
   .hero {
     position: relative;
     background-color: #000;
@@ -412,63 +412,12 @@ img {
     display: block;
   }
 
+  /* SEMBUNYIKAN TEKS DAN TOMBOL DI HP */
   .hero-content {
-    position: absolute;
-    left: 50%;
-    top: 25vh;          /* naikkan konten supaya berada di area tengah gambar */
-    right: auto;
-    bottom: auto;
-    transform: translateX(-50%);
-
-    width: 90%;
-    max-width: 500px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    background: rgba(0,0,0,0); /* transparan */
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.75);
-
-    padding: 0;
-    margin: 0;
-    border-radius: 16px;
+    display: none;
   }
 
-  /* batasi isi hero di mobile */
-  .hero-content > * {
-    max-width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 1.4rem;
-    line-height: 1.35;
-    margin: 0 0 12px 0;
-    color: #fff;
-    max-width: 22ch;
-    text-align: center;
-  }
-
-  .hero .lead {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin: 0 0 16px 0;
-    color: #fff;
-    max-width: 32ch;
-    text-align: center;
-  }
-
-  .hero .cta.big,
-  .hero .cta {
-    font-size: 1rem;
-    padding: 12px 20px;
-    border-radius: 30px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
-  }
-
-  /* Tombol map dan hubungi di lokasi agar tidak dempet */
+  /* Lokasi tombol map & hubungi agar tidak dempet */
   .location p:last-of-type {
     display: flex;
     flex-wrap: wrap;
@@ -497,15 +446,7 @@ img {
 
 @media (max-width: 480px) {
   .hero-img {
-    height: 85vh; /* konsisten */
-  }
-
-  .hero h1 {
-    font-size: 1.4rem;
-  }
-
-  .hero .lead {
-    font-size: 0.95rem;
+    height: 85vh; /* konsisten tinggi */
   }
 
   .gallery-grid img {
