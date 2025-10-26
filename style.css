@@ -277,6 +277,7 @@ img {
   margin-top: 30px;
 }
 
+/* default (desktop / tablet) */
 .gallery-grid img {
   width: 100%;
   height: 230px;
@@ -284,11 +285,34 @@ img {
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
   transition: transform 0.3s ease-in-out;
+  background-color: #fff;
 }
 
+/* hover efek desktop */
 .gallery-grid img:hover {
   transform: scale(1.05);
 }
+
+/* --- MOBILE FIX: jangan crop gambarnya --- */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* 1 kolom per baris biar lega */
+  }
+
+  .gallery-grid img {
+    height: auto;               /* biar tinggi ngikutin gambar asli */
+    max-height: none;
+    object-fit: contain;        /* jangan dipotong */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    border-radius: 16px;
+    background-color: #fff;     /* putih di belakang kalau ada ruang kosong */
+  }
+
+  .gallery-grid img:hover {
+    transform: none;            /* di HP gak perlu efek zoom */
+  }
+}
+
 
 /* === LOKASI & KONTAK === */
 .location p {
