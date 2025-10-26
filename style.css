@@ -278,6 +278,15 @@ img {
 }
 
 /* default (desktop / tablet) */
+/* === GALERI === */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* default (desktop / tablet) */
 .gallery-grid img {
   width: 100%;
   height: 230px;
@@ -288,28 +297,40 @@ img {
   background-color: #fff;
 }
 
-/* hover efek desktop */
 .gallery-grid img:hover {
   transform: scale(1.05);
 }
 
-/* --- MOBILE FIX: jangan crop gambarnya --- */
+/* --- MOBILE LAYOUT (≤768px) --- */
 @media (max-width: 768px) {
+
+  /* Satu kolom saja, dan center */
   .gallery-grid {
-    grid-template-columns: 1fr; /* 1 kolom per baris biar lega */
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* biar tiap card di tengah layar */
+    gap: 24px;
   }
 
+  /* Kita bungkus visual card di img itu sendiri:
+     - img jadi AUTO height (tidak crop)
+     - img punya background putih, rounded, shadow, padding
+     - max-width dibatasi supaya nggak sampai mepet pinggir layar,
+       dan supaya "frame putih" pas dengan gambar */
   .gallery-grid img {
-    height: auto;               /* biar tinggi ngikutin gambar asli */
+    width: 100%;
+    max-width: 700px;           /* batas lebar kartu di HP */
+    height: auto;
     max-height: none;
-    object-fit: contain;        /* jangan dipotong */
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    border-radius: 16px;
-    background-color: #fff;     /* putih di belakang kalau ada ruang kosong */
-  }
+    object-fit: contain;        /* jangan crop */
+    background-color: #fff;     /* putih sebagai frame */
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 
-  .gallery-grid img:hover {
-    transform: none;            /* di HP gak perlu efek zoom */
+    /* Trik frame: kita tambahkan padding di sekitar gambar */
+    padding: 16px;
+    box-sizing: border-box;
+    transform: none !important; /* matikan hover zoom efek di HP */
   }
 }
 /* === LOKASI & KONTAK === */
