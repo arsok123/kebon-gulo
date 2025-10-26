@@ -45,7 +45,6 @@ img {
   transition: box-shadow 0.25s ease, background 0.25s ease;
 }
 
-/* Shadow & sedikit opacity saat scroll */
 .site-header.scrolled {
   background: rgba(245,245,245,0.95);
   box-shadow: 0 4px 12px rgba(0,0,0,0.18);
@@ -319,7 +318,7 @@ img {
   color: #fff;
 }
 
-/* === SCROLL REVEAL ANIMATION === */
+/* === SCROLL REVEAL ANIMATION (SECTION & CARDS) === */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -340,6 +339,19 @@ img {
 .reveal.delay-5 { transition-delay: 0.5s; }
 .reveal.delay-6 { transition-delay: 0.6s; }
 
+/* === HERO SPECIAL REVEAL === */
+.reveal-hero {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-hero.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
 
@@ -354,7 +366,7 @@ img {
     margin: 5px 10px 0 0;
   }
 
-  /* HERO mobile fix - biar tidak kepotong */
+  /* HERO mobile fix - biar teks & tombol tidak kepotong */
   .hero {
     position: relative;
     text-align: center;
