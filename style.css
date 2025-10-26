@@ -99,7 +99,7 @@ img {
   margin-bottom: 20px;
 }
 
-/* === CTA BUTTON (umum, hijau) === */
+/* === CTA BUTTON === */
 .cta {
   display: inline-block;
   background: #43a047;
@@ -122,7 +122,7 @@ img {
 
 /* === CTA KHUSUS "Hubungi Kami" DI LOKASI === */
 .location .cta {
-  background: #43a047; /* hijau sama seperti style umum */
+  background: #43a047;
   border-radius: 20px;
   padding: 10px 20px;
   font-size: 0.95rem;
@@ -135,24 +135,30 @@ img {
   background: #2e7d32;
 }
 
-/* === CTA MERAH UNTUK PROGRAM KAMI (brosur download) === */
+/* === PROGRAM KAMI (Tombol Brosur) === */
+.program {
+  text-align: center; /* Pastikan tombol berada di tengah */
+}
+
 .program .cta {
-  background: #E1306C;        /* merah menarik */
+  background: #E1306C;            /* Merah mencolok */
   color: #fff;
-  border-radius: 30px;
-  padding: 12px 25px;
+  border-radius: 14px;            /* Agak persegi modern */
+  padding: 14px 30px;
   font-size: 1rem;
   font-weight: 600;
   display: inline-block;
-  margin-top: 20px;
-  margin-right: 15px;
+  margin: 12px auto;              /* Rata tengah dan beri jarak antar tombol */
   text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Bayangan lembut */
+  text-align: center;
 }
 
 .program .cta:hover {
-  background: #c12456;        /* merah lebih gelap saat hover */
-  transform: scale(1.05);
+  background: #c12456;
+  transform: translateY(-2px);    /* Efek hover halus */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
 
 /* === SECTIONS === */
@@ -300,7 +306,6 @@ img {
     font-size: 0.95rem;
   }
 
-  /* nav jadi turun baris di layar kecil */
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -317,7 +322,6 @@ img {
     margin: 5px 10px 0 0;
   }
 
-  /* tombol map + hubungi agar tidak terlalu dempet */
   .location p:last-of-type {
     display: flex;
     flex-wrap: wrap;
@@ -330,16 +334,14 @@ img {
     width: auto;
   }
 
-  /* --- TOMBOL PROGRAM KAMI DI HP --- */
+  /* Tombol Program Kami di HP */
   .program .cta {
-    display: block;        /* tiap tombol jadi baris sendiri */
-    width: 100%;           /* full lebar container */
-    text-align: center;
-    margin: 10px 0;        /* jarak vertikal antar tombol */
+    display: block;
+    width: 90%;
+    margin: 10px auto;
     font-size: 1rem;
   }
 
-  /* galeri: tinggi gambar sedikit lebih kecil biar rapih di hp */
   .gallery-grid img {
     height: 200px;
   }
