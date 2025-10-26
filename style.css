@@ -80,11 +80,11 @@ img {
   color: #1b5e20;
 }
 
-/* === HERO SECTION (DESKTOP DEFAULT) === */
+/* === HERO SECTION (DESKTOP / DEFAULT) === */
 .hero {
   position: relative;
-  color: #fff;
   background-color: #000; /* fallback gelap di belakang gambar */
+  color: #fff;
   overflow: hidden;
 }
 
@@ -98,34 +98,51 @@ img {
   border-radius: 0;
 }
 
+/* hero-content overlay full area dan flex center */
 .hero-content {
   position: absolute;
-  inset: 0; /* top:0 right:0 bottom:0 left:0 */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* vertical center */
-  align-items: center;       /* horizontal center */
+  justify-content: center;   /* center vertical */
+  align-items: center;       /* center horizontal */
+
   text-align: center;
   padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+
   color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* batasi isi agar tidak terlalu lebar di desktop */
+.hero-content > * {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 16px;
   line-height: 1.25;
+  margin: 0 0 16px 0;
   color: #fff;
+  max-width: 20ch; /* supaya baris rapi & center */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .hero .lead {
   font-size: 1.1rem;
   line-height: 1.5;
-  max-width: 650px;
   color: #fff;
-  margin: 0 auto 24px auto; /* center block copy */
+  max-width: 650px;
+  margin: 0 auto 24px auto;
+  text-align: center;
 }
 
 /* === CTA BUTTON (HIJAU UTAMA) === */
@@ -139,6 +156,7 @@ img {
   font-size: 1rem;
   transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
 .cta:hover {
@@ -288,6 +306,7 @@ img {
   font-size: 0.95rem;
   font-weight: 600;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
 .map-link:hover {
@@ -362,7 +381,7 @@ img {
   transform: translateY(0) scale(1);
 }
 
-/* === RESPONSIVE === */
+/* === RESPONSIVE (MOBILE) === */
 @media (max-width: 768px) {
 
   /* HEADER mobile layout */
@@ -376,7 +395,7 @@ img {
     margin: 5px 10px 0 0;
   }
 
-  /* ===== HERO MOBILE REVISI ===== */
+  /* ===== HERO MOBILE ===== */
   .hero {
     position: relative;
     background-color: #000;
@@ -396,8 +415,11 @@ img {
   .hero-content {
     position: absolute;
     left: 50%;
+    right: auto;
+    top: auto;
     bottom: 24px;
     transform: translateX(-50%);
+
     width: 90%;
     max-width: 480px;
 
@@ -406,29 +428,36 @@ img {
     align-items: center;
     text-align: center;
 
+    background: rgba(0,0,0,0); /* transparan, tidak abu-abu */
     color: #fff;
     text-shadow: 0 2px 8px rgba(0,0,0,0.75);
 
-    background: rgba(0,0,0,0);
     padding: 0;
     margin: 0;
     border-radius: 16px;
   }
 
+  /* batasi isi hero di mobile */
+  .hero-content > * {
+    max-width: 100%;
+  }
+
   .hero h1 {
     font-size: 1.4rem;
     line-height: 1.35;
-    margin-bottom: 12px;
+    margin: 0 0 12px 0;
     color: #fff;
     max-width: 20ch;
+    text-align: center;
   }
 
   .hero .lead {
     font-size: 0.95rem;
     line-height: 1.5;
-    margin-bottom: 16px;
+    margin: 0 0 16px 0;
     color: #fff;
     max-width: 32ch;
+    text-align: center;
   }
 
   .hero .cta.big,
@@ -450,6 +479,7 @@ img {
   .location .cta {
     margin-left: 0;
     width: auto;
+    text-align: center;
   }
 
   /* Tombol Program Kami di HP full width rapi tengah */
@@ -467,7 +497,7 @@ img {
 
 @media (max-width: 480px) {
   .hero-img {
-    height: 85vh; /* samakan dengan mobile utama */
+    height: 85vh; /* konsisten */
   }
 
   .hero h1 {
